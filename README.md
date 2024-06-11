@@ -1,4 +1,3 @@
-
 # Semantic Proximity Crawler
 
 Cette application Python est un crawler de site web qui analyse le contenu des pages, identifie les thématiques principales et génère des visualisations de type graph forcé pour représenter ces thématiques.
@@ -20,23 +19,23 @@ Cette application Python est un crawler de site web qui analyse le contenu des p
 
 1. Clonez le dépôt sur votre machine locale :
 
-    \`\`\`bash
+    ```bash
     git clone https://github.com/friteuseb/semantic_proximity.git
     cd semantic_proximity
-    \`\`\`
+    ```
 
 2. Créez un environnement virtuel (recommandé) et activez-le :
 
-    \`\`\`bash
+    ```bash
     python -m venv venv
     source venv/bin/activate  # Sur Windows: venv\Scripts\activate
-    \`\`\`
+    ```
 
 3. Installez les dépendances requises :
 
-    \`\`\`bash
+    ```bash
     pip install -r requirements.txt
-    \`\`\`
+    ```
 
 ## Utilisation
 
@@ -44,9 +43,9 @@ Cette application Python est un crawler de site web qui analyse le contenu des p
 
 Pour utiliser l'interface graphique :
 
-    \`\`\`bash
+    ```bash
     python3 gui_crawler.py
-    \`\`\`
+    ```
 
 ### Utilisation en Ligne de Commande
 
@@ -54,43 +53,43 @@ Pour utiliser l'interface graphique :
 
 Pour crawler un site web et analyser les thématiques :
 
-    \`\`\`bash
+    ```bash
     python3 crawler.py <URL_DE_BASE> <SELECTEURS_CSS> <NOMBRE_DE_PAGES>
-    \`\`\`
+    ```
 
-- \`<URL_DE_BASE>\` : L'URL de base du site web à crawler (ex: \`https://example.com\`).
-- \`<SELECTEURS_CSS>\` : Les classes ou ID des zones à indexer, séparés par des virgules (ex: \`.content, #main\`).
-- \`<NOMBRE_DE_PAGES>\` : Le nombre de pages à crawler (0 pour crawler tout le site).
+- `<URL_DE_BASE>` : L'URL de base du site web à crawler (ex: `https://example.com`).
+- `<SELECTEURS_CSS>` : Les classes ou ID des zones à indexer, séparés par des virgules (ex: `.content, #main`).
+- `<NOMBRE_DE_PAGES>` : Le nombre de pages à crawler (0 pour crawler tout le site).
 
 Exemple :
 
-    \`\`\`bash
+    ```bash
     python3 crawler.py https://example.com ".content" 10
-    \`\`\`
+    ```
 
 #### Visualisation des Données
 
 Pour visualiser les données enregistrées dans la base de données :
 
-    \`\`\`bash
+    ```bash
     python3 view_data.py
-    \`\`\`
+    ```
 
 #### Génération du Graph Forcé
 
 Pour générer un graph forcé représentant les thématiques des pages :
 
-    \`\`\`bash
+    ```bash
     python3 forced_graph.py
-    \`\`\`
+    ```
 
 ## Structure du Projet
 
-- \`crawler.py\` : Script principal pour crawler le site et analyser les thématiques.
-- \`view_data.py\` : Script pour afficher les données enregistrées dans la base de données.
-- \`forced_graph.py\` : Script pour générer un graph forcé des thématiques.
-- \`gui_crawler.py\` : Interface graphique pour faciliter l'utilisation des scripts.
-- \`requirements.txt\` : Liste des dépendances Python requises.
+- `crawler.py` : Script principal pour crawler le site et analyser les thématiques.
+- `view_data.py` : Script pour afficher les données enregistrées dans la base de données.
+- `forced_graph.py` : Script pour générer un graph forcé des thématiques.
+- `gui_crawler.py` : Interface graphique pour faciliter l'utilisation des scripts.
+- `requirements.txt` : Liste des dépendances Python requises.
 
 ## Contribuer
 
