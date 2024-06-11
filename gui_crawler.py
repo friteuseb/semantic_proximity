@@ -74,4 +74,12 @@ class CrawlerApp:
 
     def view_data(self):
         try:
-            s
+            subprocess.run("python3 view_data.py", shell=True, check=True)
+        except subprocess.CalledProcessError as e:
+            error_msg = e.output.decode() if e.output else str(e)
+            messagebox.showerror("Erreur", error_msg)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = CrawlerApp(root)
+    root.mainloop()

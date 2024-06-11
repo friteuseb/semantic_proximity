@@ -1,0 +1,7 @@
+beautifulsoup4
+requests
+sqlalchemy
+scikit-learn
+nltk
+networkx
+matplotlib
